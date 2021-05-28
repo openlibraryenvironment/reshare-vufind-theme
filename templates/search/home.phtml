@@ -1,0 +1,38 @@
+<?php //only wanted to apply this style to this template ?>
+<style>
+  @media (min-width:768px) { 
+      #searchForm {
+	text-align:center;
+      }
+  }
+</style>
+<?php
+  // Set page title.
+  $this->headTitle($this->translate('Search Home'));
+
+  // Disable top search box -- this page has a special layout.
+  $this->layout()->searchbox = false;
+
+  // Set default value if necessary:
+  if (!isset($this->searchClassId)) {
+    $this->searchClassId = 'Solr';
+  }
+
+  $this->layout()->breadcrumbs = false;
+?>
+
+<div class="searchHomeContent" id="searchHomeContent">
+  <?=$this->context($this)->renderInContext("search/searchbox.phtml", ['ignoreHiddenFilterMemory' => true])?>
+  <?=$this->inlineScript(\Zend\View\Helper\HeadScript::SCRIPT, '$("#searchForm_lookfor").focus();', 'SET'); ?>
+</div>
+
+<?=implode('', array_map([$this, 'contentBlock'], $blocks ?? []))?>
+<script>
+  //ADDED THIS JS CODE TO REMOVE A SMALL WHITE MARGIN ON THE LEFT AND RIGHT 
+  //SIDE OF THE HEADER **ONLY** ON THIS SEARCH HOME PAGE...BECAUSE THE 'BANNER'
+  //IS TOGETHER WITH THE CONTENT
+$(document).ready(function() {
+	$('#searchHomeContent').parent().removeClass('container');
+	$('#searchHomeContent').parent().addClass('searchHomeContent-container');
+});
+</script>
