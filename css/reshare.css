@@ -2,6 +2,10 @@ header.hidden-print {
   background-color: white;
 }
 
+footer.hidden-print {
+  border-top: 0px;
+}
+
 .searchHomeContent::after {
   display: none;
 }
