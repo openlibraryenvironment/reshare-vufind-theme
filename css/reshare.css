@@ -1,0 +1,61 @@
+header.hidden-print {
+  background-color: white;
+}
+
+.searchHomeContent::after {
+  display: none;
+}
+
+.searchHomeContent {
+  background-image: none !important;
+  background-color: #007ebd;
+}
+
+.btn-primary-reshare,
+.btn-primary-reshare:active,
+.btn-primary-reshare:hover,
+.btn-primary-reshare:active,
+.btn-primary-reshare:visited {
+  outline: none !important;
+  color: white !important;
+  background-color: #1976d2 !important;
+}
+
+header a,
+header .nav a,
+.btn-link {
+  color: #1976d2;
+}
+.navbar-toggle {
+  color: #1976d2;
+}
+.btn-link-white {
+  color: white !important;
+}
+.btn-primary-find {
+  background-color: #efefef;
+  color: black;
+}
+
+header .navbar-brand {
+  background-image: url("../../ReShare/images/reshare_logo.png");
+}
+
+.btn-primary {
+  color: black;
+}
+.search {
+  background-color: #007ebd !important;
+  background-clip: border-box;
+}
+.searchForm {
+  padding-top: 1.6rem !important;
+}
+.searchHomeContent-container {
+  margin-left: auto;
+  background-color: #007ebd !important;
+}
+.search-wrapper {
+  width: 100%;
+  background-color: #007ebd;
+}

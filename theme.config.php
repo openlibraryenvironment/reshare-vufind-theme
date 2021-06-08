@@ -1,10 +1,7 @@
 <?php
 return [
 	'extends' => 'sandal',
-        'css' => [
-		'custom.css'
+	'css' => [
+		'reshare.css',
 	],
-	'less' => [
-		'custom.less'
-	]
 ];
