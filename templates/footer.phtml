@@ -1,19 +1,22 @@
 <footer class="hidden-print">
   <div class="footer-container">
     <div class="footer-column">
-      <p><strong></strong></p>
-      <ul>
-      </ul>
+      <?php $this->slot('footer-left')->start(); ?>
+        <? // Remove Search Options h2 ?>
+        <? // Remove ul and search links ?>
+      <?=$this->slot('footer-left')->end(); ?>
     </div>
     <div class="footer-column">
-      <p><strong></strong></p>
-      <ul>
-      </ul>
+      <?php $this->slot('footer-center')->start(); ?>
+        <? // Remove Find More h2 ?>
+        <? // Remove ul and find more links ?>
+      <?=$this->slot('footer-center')->end(); ?>
     </div>
     <div class="footer-column">
-      <p><strong></strong></p>
-      <ul>
-      </ul>
+      <?php $this->slot('footer-right')->start(); ?>
+        <? // Remove Need Help h2 ?>
+        <? // Remove ul and help links ?>
+      <?=$this->slot('footer-right')->end(); ?>
     </div>
   </div>
   <div class="poweredby">

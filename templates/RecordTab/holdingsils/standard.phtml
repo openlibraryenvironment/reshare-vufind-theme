@@ -1,12 +1,11 @@
-
 <?php if (strlen($holding['barcode'] ?? '') > 0): ?>
-
   <?php
     $check = $holding['check'] ?? false;
     $checkStorageRetrievalRequest = $holding['checkStorageRetrievalRequest'] ?? false;
     $checkILLRequest = $holding['checkILLRequest'] ?? false;
   ?>
   <tr vocab="http://schema.org/" typeof="Offer">
+    <?// Removed copy number ?>
     <th class="copy-number">
       <?php if ($holding['enumchron'] ?? false): ?>
         <span class="enumchron">(<?=$this->escapeHtml($holding['enumchron'])?>)</span>
@@ -22,7 +21,7 @@
       <?php else: ?>
         <?php if ($holding['availability'] ?? false): ?>
           <?php /* Begin Available Items (Holds) */ ?>
-	  <!--removed available status-->
+	         <? // Removed available status ?>
           <?php if ($holding['link'] ?? false): ?>
             <a class="<?=$check ? 'checkRequest ' : ''?>placehold" <?php if (!empty($holding['linkLightbox'])): ?>data-lightbox <?php endif; ?>href="<?=$this->recordLink()->getRequestUrl($holding['link'])?>"><i class="fa fa-flag" aria-hidden="true"></i>&nbsp;<?=$this->transEsc($check ? "Check Hold" : "Place a Hold")?></a>
           <?php endif; ?>
@@ -34,9 +33,8 @@
           <?php endif; ?>
         <?php else: ?>
           <?php /* Begin Unavailable Items (Recalls) */ ?>
-	  <!--removed unavailable status-->
+	        <? //Removed unavailable status ?>
           <?php if ($holding['returnDate'] ?? false): ?>&ndash; <span class="small"><?=$this->escapeHtml($holding['returnDate'])?></span><?php endif; ?>
-
           <?php if ($holding['duedate'] ?? false): ?>
             &ndash; <span class="small"><?=$this->transEsc("Due")?>: <?=$this->escapeHtml($holding['duedate'])?></span>
           <?php endif; ?>
