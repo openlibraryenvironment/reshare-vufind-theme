@@ -15,6 +15,26 @@ footer.hidden-print {
   background-color: #007ebd;
 }
 
+h1.hidden {
+display: none;	
+}
+
+h2 {
+margin-left: 1rem; 
+margin-right: 1rem; 	
+}
+
+h4.sidebar {
+margin-left: 1rem; 
+margin-right: 1rem; 	
+}
+
+.sidebar, 
+.checkbox-filter {
+margin-left: 1rem; 
+margin-right: 1rem; 	
+}
+
 .btn-primary-reshare,
 .btn-primary-reshare:active,
 .btn-primary-reshare:hover,
